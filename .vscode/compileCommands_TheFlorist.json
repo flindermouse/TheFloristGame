@@ -1,0 +1,277 @@
+[
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Ability.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Ability.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\AbilityComponent.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\AbilityComponent.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Bouquet.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Bouquet.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTS_CurrentLocation.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTS_CurrentLocation.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTS_LastKnownLocation.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTS_LastKnownLocation.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Attack.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Attack.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Buff.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Buff.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Debuff.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Debuff.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Defend.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Defend.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_EndTurn.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_EndTurn.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_FindPatrol.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_FindPatrol.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Flee.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Flee.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Heal.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_Heal.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_OffensiveAbility.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_OffensiveAbility.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_StartTurn.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\BTT_StartTurn.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Enemy.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Enemy.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Flower.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Flower.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Grabs.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\Grabs.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\HealthStatusComponent.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\HealthStatusComponent.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFlorist.Build.cs",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFlorist.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFlorist.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFloristCharacter.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFloristCharacter.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFloristGameMode.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TheFloristGameMode.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnAI.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnAI.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedGameMode.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedGameMode.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedPawn.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedPawn.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedPC.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\TurnBasedPC.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\WanderAI.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\Source\\TheFlorist\\WanderAI.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\TheFlorist\\theflorist\\.vscode\\compileCommands_TheFlorist\\TheFlorist.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	}
+]
