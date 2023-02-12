@@ -72,3 +72,15 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# unnecessary content
+Content/AEO_Abilities/MagicAEO
+Content/AEO_Abilities/MagicAEO_Optimal/Maps
+Content/AEO_Abilities/Other
+Content/HandPaintedEnvironment/Maps
+Content/Kobo_Nature/Levels
+Content/Magic_Forest/Level
+Content/StylizedForestPack/Levels
+
+# temp
+Content
