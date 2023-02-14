@@ -17,14 +17,6 @@ enum class EHealthState : uint8
 	dead UMETA(DisplayName = "Dead")
 };
 
-UENUM(BlueprintType)
-enum class ECombatMood : uint8
-{
-	aggro UMETA(DisplayName = "Aggressive"),
-	defence UMETA(DisplayName = "Defensive"),
-	scared UMETA(DisplayName = "Scared")
-};
-
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class THEFLORIST_API UHealthStatusComponent : public UActorComponent
 {
@@ -55,10 +47,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Health")
 	void SetMaxHealth(float max) {maxHealth = max;}
 
-	//UFUNCTION(BlueprintPure, Category = "Health")
+	UFUNCTION(BlueprintPure, Category = "Health")
 	EHealthState GetCurrentState() const; 
-	//UFUNCTION(BlueprintPure, Category = "Mood")
-	ECombatMood GetCurrentMood() const;
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Health")

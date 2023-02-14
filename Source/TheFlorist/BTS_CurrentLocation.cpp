@@ -19,8 +19,7 @@ void UBTS_CurrentLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* No
     if(player){
         if(OwnerComp.GetAIOwner()){
             if(OwnerComp.GetAIOwner()->LineOfSightTo(player)){
-                OwnerComp.GetBlackboardComponent()->SetValueAsVector(GetSelectedBlackboardKey(),
-                    player->GetActorLocation());
+                OwnerComp.GetBlackboardComponent()->SetValueAsObject(GetSelectedBlackboardKey(), player);
             }
             else{
                 OwnerComp.GetBlackboardComponent()->ClearValue(GetSelectedBlackboardKey());

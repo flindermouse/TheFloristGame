@@ -9,7 +9,7 @@
 #include "TurnBasedPawn.generated.h"
 
 UCLASS()
-class THEFLORIST_API ATurnBasedPawn : public APawn, public IGameplayTagAssetInterface
+class THEFLORIST_API ATurnBasedPawn : public APawn
 {
 	GENERATED_BODY()
 
@@ -34,9 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	void Attack(AActor* target);
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
-	bool UseSpecialAbility(enum EAbilityType abilType, ATurnBasedPawn* target = nullptr);
-	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	bool UseAbilityByIndex(int abilInd, ATurnBasedPawn* target = nullptr);
+	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
+	void UseHealingAbility(UAbility* ability);
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	void Defend();
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
@@ -61,25 +61,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Accuracy")
 	void SetAccuracy(float newAcc) {accuracy = newAcc;}
 
-	//Health
-	UFUNCTION(BlueprintPure, Category = "Health")
-	float GetCurrentHealth();
-	UFUNCTION(BlueprintPure, Category = "Health")
-	EHealthState GetCurrentState();
-
-	//heal
-	UFUNCTION(BlueprintCallable, Category = "Healing")
-	void Heal(UAbility* ability);
-
 	//ongoing effects
 	UFUNCTION(BlueprintCallable, Category = "Effects")
 	void DecrementEffectDurations();
-
-	//Mood
-	UFUNCTION(BlueprintPure, Category = "Mood")
-	ECombatMood GetCurrentMood();
-	UFUNCTION(BlueprintCallable, Category = "Mood")
-	void SetCombatMoodTag();
 
 	//Intent
 	UFUNCTION(BlueprintPure, Category = "Intent")
@@ -87,10 +71,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Intent")
 	void SetIntent(FString newIn) {intent = newIn;}
 
-	//Gameplay Tags
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
-	FGameplayTagContainer gameplayTags;
-	virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = gameplayTags; return; }
+	//health + abilities
+	class UHealthStatusComponent* GetHealthComponent(){return health;}
+	class UAbilityComponent* GetAbilityComponent(){return abilities;}
+
+	//damage 
+	virtual void DealsDamage(AActor* target, float damage);
 
 private:
 	class ATurnBasedGameMode* gameMode;
@@ -103,12 +89,10 @@ private:
 	bool hasGuard = false;
 	UPROPERTY(VisibleAnywhere, Category = "Defence")
 	float guardAmount = 0.5f;
+
 	UPROPERTY(VisibleAnywhere, Category = "Accuracy")
 	float accuracy = 0.95f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Intent")
 	FString intent = TEXT("");
-
-	UFUNCTION()
-	void DealsDamage(AActor* target, float damage);
 };

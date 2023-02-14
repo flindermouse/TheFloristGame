@@ -5,6 +5,7 @@
 
 #include "TurnAI.h"
 #include "TurnBasedGameMode.h"
+#include "TurnBasedEnemy.h"
 #include "TurnBasedPawn.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -19,7 +20,7 @@ EBTNodeResult::Type UBTT_EndTurn::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
 
      ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
     if(enemyAI){
-        ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+        ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
         if(enemy){
             //set mood for next turn
             enemy->SetCombatMoodTag();
@@ -31,7 +32,7 @@ EBTNodeResult::Type UBTT_EndTurn::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
     ATurnBasedGameMode* gameMode = GetWorld()->GetAuthGameMode
 													<ATurnBasedGameMode>();
     if(gameMode){
-        UE_LOG(LogTemp, Display, TEXT("Switch to Player (BTT_EndTurn)"));
+        //UE_LOG(LogTemp, Display, TEXT("Switch to Player (BTT_EndTurn)"));
         gameMode->EndTurn(); 
 
         ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));

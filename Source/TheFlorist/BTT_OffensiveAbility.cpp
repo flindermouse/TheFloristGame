@@ -5,6 +5,7 @@
 
 #include "Ability.h"
 #include "TurnAI.h"
+#include "TurnBasedEnemy.h"
 #include "TurnBasedPawn.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -19,11 +20,11 @@ EBTNodeResult::Type UBTT_OffensiveAbility::ExecuteTask(UBehaviorTreeComponent &O
     if(OwnerComp.GetAIOwner()){
         ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
         if(enemyAI){
-            ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+            ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
             if(enemy){
                 ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
                 if(player){
-                    UE_LOG(LogTemp, Display, TEXT("Enemy attempting to use special damage (UBTT_OffensiveAbility)"));
+                    //UE_LOG(LogTemp, Display, TEXT("Enemy attempting to use special damage (UBTT_OffensiveAbility)"));
                     if(enemy->UseSpecialAbility(EAbilityType::damage, player)){
                         return EBTNodeResult::Succeeded;
                     }

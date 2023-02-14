@@ -5,7 +5,7 @@
 
 #include "Ability.h"
 #include "TurnAI.h"
-#include "TurnBasedPawn.h"
+#include "TurnBasedEnemy.h"
 
 UBTT_Buff::UBTT_Buff(){
     NodeName = TEXT("Use Buff");
@@ -18,9 +18,9 @@ EBTNodeResult::Type UBTT_Buff::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
     if(OwnerComp.GetAIOwner()){
         ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
         if(enemyAI){
-            ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+            ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
             if(enemy){
-                UE_LOG(LogTemp, Display, TEXT("Enemy attempting to buff (BTT_Buff)"));
+                //UE_LOG(LogTemp, Display, TEXT("Enemy attempting to buff (BTT_Buff)"));
                 if(enemy->UseSpecialAbility(EAbilityType::buff, enemy)){
                     return EBTNodeResult::Succeeded;
                 }

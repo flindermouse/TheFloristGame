@@ -2,6 +2,7 @@
 
 
 #include "HealthStatusComponent.h"
+
 #include "TheFloristGameMode.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -11,8 +12,6 @@ UHealthStatusComponent::UHealthStatusComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -33,8 +32,6 @@ void UHealthStatusComponent::BeginPlay()
 void UHealthStatusComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
 float UHealthStatusComponent::GetHealthPercent() const{
@@ -63,20 +60,6 @@ EHealthState UHealthStatusComponent::GetCurrentState() const{
 	}
 	else{
 		return EHealthState::dying;
-	}
-}
-
-ECombatMood UHealthStatusComponent::GetCurrentMood() const{
-	switch(GetCurrentState()){
-		case EHealthState::dying:
-			UE_LOG(LogTemp, Display, TEXT("mood: scared"));
-			return ECombatMood::scared;
-		case EHealthState::bloodied:
-		UE_LOG(LogTemp, Display, TEXT("mood: defensive"));
-			return ECombatMood::defence;
-		default:
-			UE_LOG(LogTemp, Display, TEXT("mood: aggresive"));
-			return ECombatMood::aggro;
 	}
 }
 

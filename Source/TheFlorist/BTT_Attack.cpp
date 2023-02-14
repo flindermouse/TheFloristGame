@@ -23,7 +23,7 @@ EBTNodeResult::Type UBTT_Attack::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
             if(enemy){
                 ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
                 if(player){
-                    UE_LOG(LogTemp, Display, TEXT("Enemy Attacking (BTT_Attack)"));
+                    //UE_LOG(LogTemp, Display, TEXT("Enemy Attacking (BTT_Attack)"));
                     enemy->Attack(player);
                     return EBTNodeResult::Succeeded;
                 }

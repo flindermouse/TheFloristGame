@@ -24,22 +24,18 @@ void ATurnBasedPawn::BeginPlay()
 	gameMode = GetWorld()->GetAuthGameMode<ATurnBasedGameMode>();	
 	health = FindComponentByClass<UHealthStatusComponent>();
 	abilities = FindComponentByClass<UAbilityComponent>();
-
-	SetCombatMoodTag();
 }
 
 // Called every frame
 void ATurnBasedPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
 void ATurnBasedPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void ATurnBasedPawn::StartTurn(){
@@ -56,7 +52,7 @@ void ATurnBasedPawn::StartTurn(){
 		abilities->CheckAndRemoveLapsedEffects();
 	}
 
-	if(hasGuard){ //defending only lasts 1 round
+	if(hasGuard){ //defending only lasts 1 turn
 		SetGuarding(false);
 	}
 }
@@ -79,44 +75,6 @@ void ATurnBasedPawn::Attack(AActor* target){
 	}
 }
 
-bool ATurnBasedPawn::UseSpecialAbility(EAbilityType abilType, ATurnBasedPawn* target){
-	int abilityIndex;
-	if(abilities->GetAbilityByType(abilType, abilityIndex)){
-		UAbility* ability = abilities->GetAbilityArray()[abilityIndex];
-		if(ability){
-			if((abilities->GetCurrentPower() >= ability->cost) && (ability->cooldownRemain == 0)){
-				//UE_LOG(LogTemp, Display, TEXT("Using ability (TBPawn)"));
-				intent = ability->name.ToString();
-				
-				switch(abilType){
-					case EAbilityType::buff:
-						abilities->AddEffect(ability, true);
-						break;
-					case EAbilityType::damage:
-						abilities->UseDamageAbility(ability, target, this);
-						break;
-					case EAbilityType::debuff:
-						target->abilities->AddEffect(ability, false);
-						break;
-					case EAbilityType::heal:
-						Heal(ability);
-						break;
-				}
-
-				ability->StartCooldownPeriod();
-				abilities->ReduceCurrentPower(ability->cost);
-
-				return true;
-			}
-			UE_LOG(LogTemp, Display, TEXT("pawn cannot afford ability / ability is on cooldown (TBPawn)"));
-		}
-		UE_LOG(LogTemp, Display, TEXT("unable to cast relevent ability (TBPawn)"));
-		return false;
-	}
-	UE_LOG(LogTemp, Display, TEXT("pawn has no relevent ability (TBPawn)"));
-	return false;
-}
-
 bool ATurnBasedPawn::UseAbilityByIndex(int abilInd, ATurnBasedPawn* target){
 	if(target){
 		UAbility* ability = abilities->GetAbilityArray()[abilInd];
@@ -135,7 +93,7 @@ bool ATurnBasedPawn::UseAbilityByIndex(int abilInd, ATurnBasedPawn* target){
 						target->abilities->AddEffect(ability, false);
 						break;
 					case EAbilityType::heal:
-						Heal(ability);
+						UseHealingAbility(ability);
 						break;
 				}
 				abilities->ReduceCurrentPower(ability->cost);
@@ -146,11 +104,19 @@ bool ATurnBasedPawn::UseAbilityByIndex(int abilInd, ATurnBasedPawn* target){
 	return false;
 }
 
+void ATurnBasedPawn::UseHealingAbility(UAbility* ability){
+	if(ability){
+		if(health){
+			health->Heal(ability->damageAmount);
+			ability->PlayAbilityVFX(this);
+		}
+	}
+}
+
 void ATurnBasedPawn::Defend(){
 	//UE_LOG(LogTemp, Display, TEXT("DEFENDING (TBPawn)"));
 	intent = TEXT("Defending");
 
-	//TODO: ?
 	SetGuarding(true);
 }
 
@@ -165,51 +131,16 @@ void ATurnBasedPawn::EndTurn(){
 	}
 }
 
-float ATurnBasedPawn::GetCurrentHealth(){
-	if(health){
-		return health->GetCurrentHealth();
-	}
-
-	//TODO: something better
-	return 0;
-}
-
-EHealthState ATurnBasedPawn::GetCurrentState(){
-	if(health){
-		return health->GetCurrentState();
-	}
-
-	//TODO: something better
-	return EHealthState::dead;
-}
-
-void ATurnBasedPawn::Heal(UAbility* ability){
-	if(health){
-		health->Heal(ability->damageAmount);
-		ability->PlayAbilityVFX(this);
-	}
-	//TODO ?
-}
-
 void ATurnBasedPawn::DecrementEffectDurations(){
 	if(abilities){
 		abilities->DecrementAllEffectDurations();
 	}
-	//TODO ?
-}
-
-ECombatMood ATurnBasedPawn::GetCurrentMood(){
-	if(health){
-		return health->GetCurrentMood();
-	}
-
-	//TODO: something better
-	return ECombatMood::aggro;
 }
 
 void ATurnBasedPawn::DealsDamage(AActor* target, float damage){
 	auto controller = GetController();
 	if(!controller) return;
+	if(!target) return;
 
 	ATurnBasedPawn* targetPawn = Cast<ATurnBasedPawn>(target);
 	if(targetPawn){
@@ -218,7 +149,6 @@ void ATurnBasedPawn::DealsDamage(AActor* target, float damage){
 			damage = floor(damage*damReduce);
 			targetPawn->SetGuarding(false);
 		}
-		targetPawn->SetCombatMoodTag();
 	}
 	
 	//TODO: Add damage types
@@ -227,34 +157,3 @@ void ATurnBasedPawn::DealsDamage(AActor* target, float damage){
 
 }
 
-void ATurnBasedPawn::SetCombatMoodTag(){
-	int dieRoll = 1 + (std::rand() % 20);
-	switch(GetCurrentMood()){
-		case ECombatMood::scared:
-			dieRoll += 10;
-			break;
-		case ECombatMood::defence:
-			dieRoll += 5;
-			break;
-		default:
-			dieRoll += 0;
-	}
-	UE_LOG(LogTemp, Display, TEXT("Updating tag, dice roll after mods = %i"), dieRoll);   
-	
-	FName combatMood;
-	if(dieRoll >= 24){
-		combatMood = TEXT("Flee");
-		UE_LOG(LogTemp, Display, TEXT("new intention: flee"));
-	}
-	else if((dieRoll > 15) && (dieRoll <=23)){
-		combatMood = TEXT("Defend");
-		UE_LOG(LogTemp, Display, TEXT("new intention: defend"));
-	}
-	else{
-		combatMood = TEXT("Attack");
-		UE_LOG(LogTemp, Display, TEXT("new intention: attack"));
-	}
-
-	Tags.Empty();
-	Tags.Add(combatMood);
-}

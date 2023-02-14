@@ -4,8 +4,8 @@
 #include "TurnAI.h"
 
 #include "HealthStatusComponent.h"
+#include "TurnBasedEnemy.h"
 #include "TurnBasedGameMode.h"
-#include "TurnBasedPawn.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -28,9 +28,9 @@ void ATurnAI::UpdateTurnOnBlackboard(bool isPlayerTurn){
 }
 
 bool ATurnAI::IsDead() const{
-    ATurnBasedPawn* pawn = Cast<ATurnBasedPawn>(GetPawn());
+    ATurnBasedEnemy* pawn = Cast<ATurnBasedEnemy>(GetPawn());
     if(pawn){
-        if(pawn->GetCurrentState() == EHealthState::dead){
+        if(pawn->GetHealthComponent()->GetCurrentState() == EHealthState::dead){
             return true;
         }
         else{

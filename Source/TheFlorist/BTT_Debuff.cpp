@@ -5,6 +5,7 @@
 
 #include "Ability.h"
 #include "TurnAI.h"
+#include "TurnBasedEnemy.h"
 #include "TurnBasedPawn.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -20,11 +21,11 @@ EBTNodeResult::Type UBTT_Debuff::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
     if(OwnerComp.GetAIOwner()){
         ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
         if(enemyAI){
-            ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+            ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
             if(enemy){
                 ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
                 if(player){
-                    UE_LOG(LogTemp, Display, TEXT("Enemy attempting to debuff (BTT_Debuff)"));
+                    //UE_LOG(LogTemp, Display, TEXT("Enemy attempting to debuff (BTT_Debuff)"));
                     if(enemy->UseSpecialAbility(EAbilityType::debuff, player)){
                         return EBTNodeResult::Succeeded;
                     }

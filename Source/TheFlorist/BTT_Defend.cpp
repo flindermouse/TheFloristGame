@@ -18,7 +18,7 @@ EBTNodeResult::Type UBTT_Defend::ExecuteTask(UBehaviorTreeComponent &OwnerComp, 
         if(enemyAI){
             ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
             if(enemy){
-                UE_LOG(LogTemp, Display, TEXT("Enemy Defending (BTT_Defend)"));
+                //UE_LOG(LogTemp, Display, TEXT("Enemy Defending (BTT_Defend)"));
                 enemy->Defend();
                 return EBTNodeResult::Succeeded;
             }

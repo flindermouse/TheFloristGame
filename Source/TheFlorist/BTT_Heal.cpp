@@ -5,7 +5,7 @@
 
 #include "Ability.h"
 #include "TurnAI.h"
-#include "TurnBasedPawn.h"
+#include "TurnBasedEnemy.h"
 
 UBTT_Heal::UBTT_Heal(){
     NodeName = TEXT("Heal");
@@ -18,9 +18,9 @@ EBTNodeResult::Type UBTT_Heal::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
     if(OwnerComp.GetAIOwner()){
         ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
         if(enemyAI){
-            ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+            ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
             if(enemy){
-                UE_LOG(LogTemp, Display, TEXT("Enemy attempting to heal (BTT_Heal)"));
+                //UE_LOG(LogTemp, Display, TEXT("Enemy attempting to heal (BTT_Heal)"));
                 if(enemy->UseSpecialAbility(EAbilityType::heal, enemy)){
                     return EBTNodeResult::Succeeded;
                 }
