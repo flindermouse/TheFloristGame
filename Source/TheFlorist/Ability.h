@@ -34,7 +34,7 @@ enum class ETargetAttribute : uint8{
 	none UMETA(DisplayName = "None"),
 	strength UMETA(DisplayName = "Strength"),
 	endurance UMETA(DisplayName = "Endurance"),
-	stamina UMETA(DisplayName = "Stamina"),
+	experience UMETA(DisplayName = "Experience"),
 	accuracy UMETA(DisplayName = "Accuracy"),
 	defence UMETA(DisplayName = "Defence")
 };
