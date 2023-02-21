@@ -32,4 +32,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance")
 	UStaticMeshComponent* mesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Use")
+	float percentEffective;
 };

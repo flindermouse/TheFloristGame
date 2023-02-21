@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "Ability.h"
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 
@@ -33,7 +32,10 @@ public:
 	USkeletalMeshComponent* mesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<UAbility*> abilities;
+	TArray<class UAbility*> abilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<class UItem*> rewards;
 
 	//TODO:
 	// add anims

@@ -25,6 +25,13 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "Items")
 	TMap<UItem*, int> GetItemMap() const { return items; }
+	UFUNCTION(BlueprintCallable, Category = "Items")
+	void SetItemMap(TMap<UItem*, int> newItems) {items = newItems;}
+
+	UFUNCTION(BlueprintCallable, Category = "Use Item")
+	float RestoreMeter(UItem* itemUsed, float meterMax);
+	UFUNCTION(BlueprintCallable, Category = "Use Item")
+	float IncreaseStat(UItem* itemUsed);
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Items")

@@ -23,3 +23,16 @@ void UPlayerInventory::RemoveItem(UItem* oldItem){
         items.Remove(oldItem);
     }
 }
+
+float UPlayerInventory::RestoreMeter(UItem* itemUsed, float meterMax){
+
+    if(!itemUsed) return 0.f;
+    
+    return (meterMax / 100) * itemUsed->percentEffective;
+}
+
+float UPlayerInventory::IncreaseStat(UItem* itemUsed){
+    if(!itemUsed) return 1.f;
+
+    return (itemUsed->percentEffective / 100) + 1;
+}
