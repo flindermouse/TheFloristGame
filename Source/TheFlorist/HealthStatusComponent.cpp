@@ -75,22 +75,21 @@ void UHealthStatusComponent::TakeDamage(AActor* damagedAct, float damage, const 
 
 		//tell the game mode someone is dead
 		ATheFloristGameMode* gameMode = GetWorld()->GetAuthGameMode<ATheFloristGameMode>();
-		if(gameMode){
-			APawn* deadPawn = Cast<APawn>(GetOwner());
-			if(deadPawn){
-				gameMode->PawnKilled(deadPawn);
+		if(!gameMode) return;
 
-				if(!deadPawn->GetController()->IsPlayerController()){ //only destroy if enemy
-					// get ready for destruction + turn off collisions
-					deadPawn->DetachFromControllerPendingDestroy(); 
-					deadPawn->Destroy();
-					UE_LOG(LogTemp, Warning, TEXT("Pawn destroyed (HSComp)"))
-				}
-				else{
-					UE_LOG(LogTemp, Warning, TEXT("Player defeated (HSComp)"));
-				}
-			}
-			
+		APawn* deadPawn = Cast<APawn>(GetOwner());
+		if(!deadPawn) return;
+
+		gameMode->PawnKilled(deadPawn);
+
+		if(!deadPawn->GetController()->IsPlayerController()){ //only destroy if enemy
+			// get ready for destruction + turn off collisions
+			deadPawn->DetachFromControllerPendingDestroy(); 
+			deadPawn->Destroy();
+			UE_LOG(LogTemp, Warning, TEXT("Pawn destroyed (HSComp)"))
+		}
+		else{
+			UE_LOG(LogTemp, Warning, TEXT("Player defeated (HSComp)"));
 		}
 	}			
 }

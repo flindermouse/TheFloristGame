@@ -51,8 +51,8 @@ public:
 	EHealthState GetCurrentState() const; 
 
 private:
-	UPROPERTY(VisibleAnywhere, Category = "Health")
-	float maxHealth = 100.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Health")
+	float maxHealth;
 	UPROPERTY(VisibleAnywhere, Category = "Health")
 	float currentHealth;
 

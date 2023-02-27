@@ -40,12 +40,24 @@ public:
 	void SetCombatMoodTag();
 
 	//Gameplay Tags
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
-	FGameplayTagContainer gameplayTags;
+	UFUNCTION(BlueprintPure, Category = "GameplayTags")
 	virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = gameplayTags; return; }
 
+	// combat
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	bool UseSpecialAbility(enum EAbilityType abilType, ATurnBasedPawn* target = nullptr);
 
-	virtual void DealsDamage(AActor* target, float damage) override;
+	virtual void Attack(AActor* target) override;
+
+	// anim
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	void PlayIdle();
+
+private:
+	USkeletalMeshComponent* skelly;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
+	FGameplayTagContainer gameplayTags;
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	class UEnemy* enemyType;
+
 };

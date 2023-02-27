@@ -63,9 +63,9 @@ void ATurnBasedPawn::Attack(AActor* target){
 
 	float chanceToHit = abilities->AdjustAttribute(ETargetAttribute::accuracy, accuracy) * 100;
 	int dieRoll = 1 + (std::rand() % 100);
-	UE_LOG(LogTemp, Display, TEXT("chance to hit %f / die roll %i"), chanceToHit, dieRoll);
+	//UE_LOG(LogTemp, Display, TEXT("chance to hit %f / die roll %i"), chanceToHit, dieRoll);
 	if(chanceToHit >= dieRoll){
-		UE_LOG(LogTemp, Display, TEXT("attack hits"));
+		//UE_LOG(LogTemp, Display, TEXT("attack hits"));
 		float damage = abilities->AdjustAttribute(ETargetAttribute::strength, baseDamage);	
 		DealsDamage(target, damage);
 	}
@@ -126,7 +126,7 @@ void ATurnBasedPawn::EndTurn(){
 
 	//tell the game mode the turn is done
 	if(gameMode){
-		UE_LOG(LogTemp, Display, TEXT("Ending turn (TBPawn)"));
+		//UE_LOG(LogTemp, Display, TEXT("Ending turn (TBPawn)"));
 		gameMode->EndTurn();
 	}
 }

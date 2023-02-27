@@ -16,25 +16,31 @@ class THEFLORIST_API UEnemy : public UPrimaryDataAsset
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 	FString name;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 	float strength = 1.f; //multiplies baseDamage on TBP
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 	float endurance = 1.f; //multiplies maxHealth on TBP
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 	float experience = 1.f; //multiplies maxPower on TBP
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	USkeletalMeshComponent* mesh;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance")
+	USkeletalMesh* mesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
+	UAnimationAsset* idle;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
+	UAnimationAsset* attack;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
+	UAnimationAsset* hit;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
+	UAnimationAsset* cast;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
 	TArray<class UAbility*> abilities;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rewards")
 	TArray<class UItem*> rewards;
 
 	//TODO:

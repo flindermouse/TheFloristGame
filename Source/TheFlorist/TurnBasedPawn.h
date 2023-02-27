@@ -32,7 +32,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	void StartTurn();
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
-	void Attack(AActor* target);
+	virtual void Attack(AActor* target);
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	bool UseAbilityByIndex(int abilInd, ATurnBasedPawn* target = nullptr);
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
