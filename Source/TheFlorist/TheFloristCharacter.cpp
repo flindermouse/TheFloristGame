@@ -54,11 +54,6 @@ ATheFloristCharacter::ATheFloristCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
-
-	// add health, abilities, and inventory
-	health = FindComponentByClass<UHealthStatusComponent>();
-	abilities = FindComponentByClass<UAbilityComponent>();
-	inventory = FindComponentByClass<UPlayerInventory>();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -136,4 +131,15 @@ void ATheFloristCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+// Called when the game starts or when spawned
+void ATheFloristCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	// add health, abilities, and inventory
+	health = FindComponentByClass<UHealthStatusComponent>();
+	abilities = FindComponentByClass<UAbilityComponent>();
+	inventory = FindComponentByClass<UPlayerInventory>();
 }

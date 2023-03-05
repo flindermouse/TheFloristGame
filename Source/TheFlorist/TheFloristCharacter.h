@@ -63,6 +63,18 @@ public:
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	UFUNCTION(BlueprintPure, Category = "Health")
+	class UHealthStatusComponent* GetHealthComponent() const {return health;}
+	UFUNCTION(BlueprintPure, Category = "Abilities")
+	class UAbilityComponent* GetAbilityComponent() const {return abilities;}
+	UFUNCTION(BlueprintPure, Category = "Inventory")
+	class UPlayerInventory* GetInventory() const {return inventory;}
+
 private: 
 	class UHealthStatusComponent* health;
 	class UAbilityComponent* abilities;
