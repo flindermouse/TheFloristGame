@@ -21,12 +21,6 @@ void ATurnBasedEnemy::BeginPlay(){
 	skelly = Cast<USkeletalMeshComponent>(GetRootComponent());
 }
 
-void ATurnBasedEnemy::Tick(float DeltaTime){
-	Super::Tick(DeltaTime);
-
-	PlayIdle();
-}
-
 ECombatMood ATurnBasedEnemy::GetCurrentMood(){
     if(!GetHealthComponent()) return ECombatMood::aggro;
 
@@ -152,6 +146,11 @@ void ATurnBasedEnemy::Attack(AActor* target){
 
 	//UE_LOG(LogTemp, Display, TEXT("playing animation! (TBEnemy)"));
 	skelly->PlayAnimation(enemyType->attack, false);
+}
+
+void ATurnBasedEnemy::EndTurn(){
+	Super::EndTurn();
+	SetCombatMoodTag();
 }
 
 void ATurnBasedEnemy::PlayIdle(){

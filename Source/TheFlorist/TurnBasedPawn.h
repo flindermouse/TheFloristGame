@@ -40,7 +40,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
 	void Defend();
 	UFUNCTION(BlueprintCallable, Category = "Combat Actions")
-	void EndTurn();
+	virtual void EndTurn();
 
 	UFUNCTION(BlueprintPure, Category = "Defence")
 	bool IsGuarding() const {return hasGuard;}
@@ -60,6 +60,8 @@ public:
 	float GetAccuracy() const {return accuracy;}
 	UFUNCTION(BlueprintCallable, Category = "Accuracy")
 	void SetAccuracy(float newAcc) {accuracy = newAcc;}
+	UFUNCTION(BlueprintPure, Category = "Accuracy")
+	bool GetHasMissed() const {return hasMissed;}
 
 	//ongoing effects
 	UFUNCTION(BlueprintCallable, Category = "Effects")
@@ -70,6 +72,12 @@ public:
 	FString GetIntent() const {return intent;}
 	UFUNCTION(BlueprintCallable, Category = "Intent")
 	void SetIntent(FString newIn) {intent = newIn;}
+
+	// anim
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animation")
+	UAnimationAsset* idle;
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	virtual void PlayIdle();
 
 	//health + abilities
 	class UHealthStatusComponent* GetHealthComponent(){return health;}
@@ -92,6 +100,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Accuracy")
 	float accuracy = 0.95f;
+	UPROPERTY(VisibleAnywhere, Category = "Accuracy")
+	bool hasMissed = false;
 
 	UPROPERTY(VisibleAnywhere, Category = "Intent")
 	FString intent = TEXT("");

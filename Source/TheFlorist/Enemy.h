@@ -24,6 +24,8 @@ public:
 	float endurance = 1.f; //multiplies maxHealth on TBP
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 	float experience = 1.f; //multiplies maxPower on TBP
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
+	bool isBoss;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance")
 	USkeletalMesh* mesh;
@@ -36,6 +38,8 @@ public:
 	UAnimationAsset* hit;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
 	UAnimationAsset* cast;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations")
+	UAnimationAsset* guard;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
 	TArray<class UAbility*> abilities;

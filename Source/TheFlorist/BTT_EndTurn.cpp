@@ -19,29 +19,21 @@ EBTNodeResult::Type UBTT_EndTurn::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
     Super::ExecuteTask(OwnerComp, NodeMemory); 
 
      ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
-    if(enemyAI){
-        ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
-        if(enemy){
-            //set mood for next turn
-            enemy->SetCombatMoodTag();
-            //decrement any active buff/debuff duration
-	        enemy->DecrementEffectDurations();
-        }
-    }
+    if(!enemyAI) return EBTNodeResult::Failed;
 
-    ATurnBasedGameMode* gameMode = GetWorld()->GetAuthGameMode
-													<ATurnBasedGameMode>();
-    if(gameMode){
-        //UE_LOG(LogTemp, Display, TEXT("Switch to Player (BTT_EndTurn)"));
-        gameMode->EndTurn(); 
+    ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
+    if(!enemy) return EBTNodeResult::Failed;
+    enemy->EndTurn();
+
+    //ATurnBasedGameMode* gameMode = GetWorld()->GetAuthGameMode
+	//												<ATurnBasedGameMode>();
+    //if(gameMode){
+    //    //UE_LOG(LogTemp, Display, TEXT("Switch to Player (BTT_EndTurn)"));
+    //    gameMode->EndTurn(); 
 
         ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
-        if(player){
-            player->StartTurn();
-        }
-
-        return EBTNodeResult::Succeeded;
-    }
-
-    return EBTNodeResult::Failed;
+        if(!player) return EBTNodeResult::Failed;
+        player->StartTurn();
+        return EBTNodeResult::Succeeded;    
+    //}
 }

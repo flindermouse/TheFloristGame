@@ -4,6 +4,11 @@ Hand Painted Environment
 - Pine_tree
 - Pine_tree_2
 
+Magic Forest
+- SM_farplane_geo
+
 Stylized Forest Pack
+- SM_mountain_01
+- SM_mountain_02
 - SM_pine_01
 - SM_pine_02

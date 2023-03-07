@@ -30,6 +30,8 @@ void ATurnBasedPawn::BeginPlay()
 void ATurnBasedPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	PlayIdle();
 }
 
 // Called to bind functionality to input
@@ -71,7 +73,8 @@ void ATurnBasedPawn::Attack(AActor* target){
 	}
 	else {
 		//TODO: Visualise missing an attack
-		UE_LOG(LogTemp, Display, TEXT("attack misses"));
+		//UE_LOG(LogTemp, Display, TEXT("attack misses"));
+		hasMissed = true;
 	}
 }
 
@@ -121,6 +124,9 @@ void ATurnBasedPawn::Defend(){
 }
 
 void ATurnBasedPawn::EndTurn(){
+	//reset missed bool
+	hasMissed = false;
+
 	//decrement any active buff/debuff duration
 	abilities->DecrementAllEffectDurations();
 
@@ -135,6 +141,14 @@ void ATurnBasedPawn::DecrementEffectDurations(){
 	if(abilities){
 		abilities->DecrementAllEffectDurations();
 	}
+}
+
+void ATurnBasedPawn::PlayIdle(){
+	USkeletalMeshComponent* skelly = Cast<USkeletalMeshComponent>(GetRootComponent());
+
+	if(!skelly) return;
+	if(skelly->IsPlaying()) return;
+	skelly->PlayAnimation(idle, true);
 }
 
 void ATurnBasedPawn::DealsDamage(AActor* target, float damage){

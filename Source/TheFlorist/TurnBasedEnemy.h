@@ -31,8 +31,6 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	virtual void Tick(float DeltaTime) override;
-
 	//Mood
 	UFUNCTION(BlueprintPure, Category = "Mood")
 	ECombatMood GetCurrentMood();
@@ -48,10 +46,10 @@ public:
 	bool UseSpecialAbility(enum EAbilityType abilType, ATurnBasedPawn* target = nullptr);
 
 	virtual void Attack(AActor* target) override;
+	virtual void EndTurn() override;
 
 	// anim
-	UFUNCTION(BlueprintCallable, Category = "Animation")
-	void PlayIdle();
+	virtual void PlayIdle() override;
 
 private:
 	USkeletalMeshComponent* skelly;
