@@ -53,9 +53,10 @@ public:
 
 private:
 	USkeletalMeshComponent* skelly;
+
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
 	FGameplayTagContainer gameplayTags;
+
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class UEnemy* enemyType;
-
 };
