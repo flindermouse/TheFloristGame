@@ -48,9 +48,5 @@ public:
 	TArray<class UItem*> rewards;
 
 	//TODO:
-	// add anims
-	// add sounds
-
-
-	
+	// add sounds	
 };

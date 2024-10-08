@@ -32,24 +32,22 @@ void UAbility::DecrementDurationRemain(){
 }
 
 void UAbility::PlayAbilityVFX(AActor* target){
-    if (abilityVFX){
-        //UE_LOG(LogTemp, Display, TEXT("found ability vfx (UAb)"));
-        if(target){
-            //UE_LOG(LogTemp, Display, TEXT("found target (UAb)"));
-            if(target->GetWorld()){
-                //UE_LOG(LogTemp, Display, TEXT("found world, attempting spawn vfx (UAb)"));
-                UNiagaraComponent* vfxComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(target->GetWorld(), abilityVFX, 
-                                                                target->GetActorLocation(), target->GetActorRotation());
-            }
-            else{
-                UE_LOG(LogTemp, Display, TEXT("unable to find world (UAb)"));
-            }
-        }
-        else{
-            UE_LOG(LogTemp, Display, TEXT("no target (UAb)"));
-        }
-	}
-    else{
+    if(!abilityVFX){
         UE_LOG(LogTemp, Display, TEXT("No vfx for ability %s found (UAb)"), *name.ToString());
+        return;
+	}
+
+    if(!target){
+        UE_LOG(LogTemp, Display, TEXT("no target for vfx (UAb)"));
+        return;
     }
+
+    if(!target->GetWorld()){
+        UE_LOG(LogTemp, Display, TEXT("unable to find world (UAb)"));
+        return;
+    }
+
+    //UE_LOG(LogTemp, Display, TEXT("attempting spawn vfx (UAb)"));
+    UNiagaraComponent* vfxComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(target->GetWorld(), abilityVFX, 
+                                                                target->GetActorLocation(), target->GetActorRotation());
 }

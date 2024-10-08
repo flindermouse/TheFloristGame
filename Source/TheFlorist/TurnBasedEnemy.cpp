@@ -24,15 +24,13 @@ void ATurnBasedEnemy::BeginPlay(){
 ECombatMood ATurnBasedEnemy::GetCurrentMood(){
     if(!GetHealthComponent()) return ECombatMood::aggro;
 
+	// set the enemy's mood based on it's remaining health
 	switch(GetHealthComponent()->GetCurrentState()){
 		case EHealthState::dying:
-			//UE_LOG(LogTemp, Display, TEXT("mood: scared"));
 			return ECombatMood::scared;
 		case EHealthState::bloodied:
-			//UE_LOG(LogTemp, Display, TEXT("mood: defensive"));
 			return ECombatMood::defence;
 		default:
-			//UE_LOG(LogTemp, Display, TEXT("mood: aggresive"));
 			return ECombatMood::aggro;
 	}
 }
@@ -49,29 +47,22 @@ void ATurnBasedEnemy::SetCombatMoodTag(){
 		default:
 			dieRoll += 0;
 	}
-	UE_LOG(LogTemp, Display, TEXT("Updating tag, dice roll after mods = %i"), dieRoll);   
-	
-	FGameplayTag moodFlee = FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Flee")));
-	FGameplayTag moodDefend = FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Defend")));
-	FGameplayTag moodAttack = FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Attack")));
+	//UE_LOG(LogTemp, Display, TEXT("Updating tag, dice roll after mods = %i"), dieRoll);   
 
 	if(dieRoll >= 24){
-		UE_LOG(LogTemp, Display, TEXT("new intention: flee"));
-		gameplayTags.RemoveTag(moodAttack);
-		gameplayTags.RemoveTag(moodDefend);
-		gameplayTags.AddTag(moodFlee);
+		//UE_LOG(LogTemp, Display, TEXT("new intention: flee"));
+		gameplayTags.Reset();
+		gameplayTags.AddTag(FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Flee"))));
 	}
 	else if((dieRoll > 15) && (dieRoll <=23)){
-		UE_LOG(LogTemp, Display, TEXT("new intention: defend"));
-		gameplayTags.RemoveTag(moodAttack);
-		gameplayTags.RemoveTag(moodFlee);
-		gameplayTags.AddTag(moodDefend);
+		//UE_LOG(LogTemp, Display, TEXT("new intention: defend"));
+		gameplayTags.Reset();
+		gameplayTags.AddTag(FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Defend"))));
 	}
 	else{
-		UE_LOG(LogTemp, Display, TEXT("new intention: attack"));
-		gameplayTags.RemoveTag(moodFlee);
-		gameplayTags.RemoveTag(moodDefend);
-		gameplayTags.AddTag(moodAttack);
+		//UE_LOG(LogTemp, Display, TEXT("new intention: attack"));
+		gameplayTags.Reset();
+		gameplayTags.AddTag(FGameplayTag::RequestGameplayTag(FName(TEXT("EnemyAction.Attack"))));
 	}
 }
 
@@ -144,7 +135,6 @@ void ATurnBasedEnemy::Attack(AActor* target){
 		return;	
 	}
 
-	//UE_LOG(LogTemp, Display, TEXT("playing animation! (TBEnemy)"));
 	skelly->PlayAnimation(enemyType->attack, false);
 }
 

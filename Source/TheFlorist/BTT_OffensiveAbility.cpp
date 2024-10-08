@@ -17,28 +17,37 @@ EBTNodeResult::Type UBTT_OffensiveAbility::ExecuteTask(UBehaviorTreeComponent &O
                                     uint8 *NodeMemory){
     Super::ExecuteTask(OwnerComp, NodeMemory);
 
-    if(OwnerComp.GetAIOwner()){
-        ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
-        if(enemyAI){
-            ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
-            if(enemy){
-                ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
-                if(player){
-                    //UE_LOG(LogTemp, Display, TEXT("Enemy attempting to use special damage (UBTT_OffensiveAbility)"));
-                    if(enemy->UseSpecialAbility(EAbilityType::damage, player)){
-                        return EBTNodeResult::Succeeded;
-                    }
-                    else{
-                        return EBTNodeResult::Failed;
-                    }
-                }
-                UE_LOG(LogTemp, Display, TEXT("can't cast player (UBTT_OffensiveAbility)"));
-            }
-            UE_LOG(LogTemp, Display, TEXT("can't cast pawn (UBTT_OffensiveAbility)"));
-        }
+    if(!OwnerComp.GetAIOwner()){
+        UE_LOG(LogTemp, Display, TEXT("can't find ai controller (UBTT_OffensiveAbility)"));
+        return EBTNodeResult::Failed; 
+    }
+    
+    ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
+    if(!enemyAI){
         UE_LOG(LogTemp, Display, TEXT("can't cast ai controller (UBTT_OffensiveAbility)"));
-    }        
-
-    return EBTNodeResult::Failed;                             
+        return EBTNodeResult::Failed; 
+    }
+    
+    ATurnBasedEnemy* enemy = Cast<ATurnBasedEnemy>(enemyAI->GetPawn());
+    if(!enemy){
+        UE_LOG(LogTemp, Display, TEXT("can't cast enemy pawn (UBTT_OffensiveAbility)"));
+        return EBTNodeResult::Failed; 
+    }
+        
+    ATurnBasedPawn* player = Cast<ATurnBasedPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
+    if(!player){
+        UE_LOG(LogTemp, Display, TEXT("can't cast player (UBTT_OffensiveAbility)"));
+        return EBTNodeResult::Failed; 
+    }
+    
+    // use special ability checks if enemy has relevant ability & enough stamina to use it
+    if(enemy->UseSpecialAbility(EAbilityType::damage, player)){
+        // ability successfully used
+        return EBTNodeResult::Succeeded;
+    }
+    else{
+        // no ability or not enough stamina, return failed so AI can take a different action
+        return EBTNodeResult::Failed;
+    }                       
 }
 

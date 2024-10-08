@@ -72,7 +72,6 @@ void ATurnBasedPawn::Attack(AActor* target){
 		DealsDamage(target, damage);
 	}
 	else {
-		//TODO: Visualise missing an attack
 		//UE_LOG(LogTemp, Display, TEXT("attack misses"));
 		hasMissed = true;
 	}

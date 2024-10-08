@@ -13,20 +13,25 @@ UBTT_StartTurn::UBTT_StartTurn(){
 EBTNodeResult::Type UBTT_StartTurn::ExecuteTask(UBehaviorTreeComponent &OwnerComp, uint8 *NodeMemory){
     Super::ExecuteTask(OwnerComp, NodeMemory);
 
-    if(OwnerComp.GetAIOwner()){
-        ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
-        if(enemyAI){
-            ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
-            if(enemy){
-                UE_LOG(LogTemp, Display, TEXT("Enemy Starting Turn (BTT_StartTurn)"));
-                enemy->StartTurn();
-                return EBTNodeResult::Succeeded;
-            }
-            UE_LOG(LogTemp, Display, TEXT("can't cast pawn (BTT_StartTurn)"));
-        }
-        UE_LOG(LogTemp, Display, TEXT("can't cast ai controller (BTT_StartTurn)"));
+    if(!OwnerComp.GetAIOwner()){
+        UE_LOG(LogTemp, Display, TEXT("unable to get ai controller (BTT_StartTurn)"));
+        return EBTNodeResult::Failed;
     }
 
-    return EBTNodeResult::Failed;
+    ATurnAI* enemyAI = Cast<ATurnAI>(OwnerComp.GetAIOwner());
+    if(!enemyAI){
+        UE_LOG(LogTemp, Display, TEXT("can't cast ai controller (BTT_StartTurn)"));
+        return EBTNodeResult::Failed;
+    }
+    
+    ATurnBasedPawn* enemy = Cast<ATurnBasedPawn>(enemyAI->GetPawn());
+    if(!enemy){
+        UE_LOG(LogTemp, Display, TEXT("can't cast pawn (BTT_StartTurn)"));
+        return EBTNodeResult::Failed;
+    }
+    
+    //UE_LOG(LogTemp, Display, TEXT("Enemy Starting Turn (BTT_StartTurn)"));
+    enemy->StartTurn();
+    return EBTNodeResult::Succeeded;
 }
 

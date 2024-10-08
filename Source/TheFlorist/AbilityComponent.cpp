@@ -122,8 +122,7 @@ void UAbilityComponent::RemoveEffect(ETargetAttribute attribute, bool isBuff){
 }
 
 void UAbilityComponent::CheckAndRemoveLapsedEffects(){
-	//TODO (if multiple enemies are added, this logic will need to be changed as is assumes only 1
-	//	effect can be added per turn)
+	//TODO (update to remove multiple effects at the same time)
 	ETargetAttribute toRemove = ETargetAttribute::none;
 	for(TPair<ETargetAttribute, UAbility*> pair : buffs){
 		if(pair.Value->durationRemain == 0){
