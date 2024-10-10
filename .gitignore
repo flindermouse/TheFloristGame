@@ -74,4 +74,18 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 # all content
-Content
+Content/AEO_Abilities
+Content/art
+Content/Characters
+Content/FantasyForest
+Content/HandPaintedEnvironment
+Content/LevelPrototyping
+Content/Magic_Forest
+Content/Maps
+Content/Materials
+Content/Meshes
+Content/music
+Content/PlantMonster
+Content/StarterContent
+Content/StylizedForestPack
+Content/contentUsed
